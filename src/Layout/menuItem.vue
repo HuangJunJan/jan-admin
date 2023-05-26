@@ -21,7 +21,7 @@
         <span>{{ item?.meta?.title }}</span>
       </template>
       <!-- 递归 -->
-      <menuItem :menus="item.children" :parent-path="fullPath(item.path)"></menuItem>
+      <menuItem :menus="item.children" :parentPath="fullPath(item.path)"></menuItem>
     </el-sub-menu>
   </template>
 </template>
@@ -40,8 +40,8 @@ const props = defineProps({
   },
 });
 
-const fullPath = (thePath: String): String => {
-  let path: String = '';
+const fullPath = (thePath: string): string => {
+  let path: string = '';
   if (props.parentPath === '') {
     path = thePath;
   } else if (props.parentPath === '/') {

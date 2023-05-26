@@ -19,11 +19,11 @@ const showDrawer = () => {
 };
 
 const form = reactive({
-  isDark: false,
+  isDark: useDark(),
 });
 
 // 暗黑模式
-form.isDark = useDark();
+// form.isDark = useDark()  ;
 const toggleDark = useToggle(form.isDark);
 
 // 暴露数据或方法

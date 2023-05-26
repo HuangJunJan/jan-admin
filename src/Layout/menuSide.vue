@@ -18,7 +18,7 @@ const { isCollapse } = storeToRefs(settingStore);
 const router = useRouter();
 const route = useRoute();
 
-const menuSelect = (index, indexPath, item, routeResult) => {
+const menuSelect = (index: string): void => {
   if (index.indexOf('https://') > -1 || index.indexOf('http://') > -1) {
     window.location.href = index;
   } else {
