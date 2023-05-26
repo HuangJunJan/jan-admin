@@ -1,6 +1,7 @@
 <template>
   <div>
     dashboard
+    test test test
   </div>
 </template>
 
