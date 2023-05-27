@@ -10,12 +10,12 @@
 import { getList } from '@/api/test';
 import { reactive, ref } from 'vue';
 
-const mockList = ref([])
+const mockList: number[] = reactive([]);
 
 const sendHttp = () => {
   getList().then(res => {
     console.log(res);
-    mockList.value = res.data?.dataList
+    mockList.push(...res.data?.dataList);
   });
 };
 </script>
