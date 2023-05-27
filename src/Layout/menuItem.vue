@@ -6,10 +6,11 @@
       <template #title>{{ item?.meta?.title }}</template>
     </el-menu-item>
     <!-- 只有一个子菜单 -->
+    <!-- 不是根路由，要拼/ -->
     <el-menu-item
       v-if="item.children?.length === 1"
       :key="item.path"
-      :index="item.path + fullPath(item.children[0].path)"
+      :index="item.path === '/' ? item.path + fullPath(item.children[0].path) : item.path + '/' + fullPath(item.children[0].path)"
     >
       <el-icon><component :is="item.children[0]?.meta?.icon" /></el-icon>
       <template #title>{{ item.children[0]?.meta?.title }}</template>

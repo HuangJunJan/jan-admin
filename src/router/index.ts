@@ -39,16 +39,21 @@ export const baseRouter: Array<RouteRecordRaw> = [
     ]
   },
   ...multistage,
-  // {
-  //   path: '/external-link',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'https://github.com/PanJiaChen/vue-element-admin',
-  //       meta: { title: 'External Link', icon: 'link' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/external-link',
+    name: '外链',
+    meta: { title: '外链', icon: 'link' },
+    component: Layout,
+    redirect: '/external-link/bilibili',
+    children: [
+      {
+        path: 'bilibili',
+        name: 'bilibili',
+        meta: { title: 'Bilibili(内嵌)', icon: 'link', linkUrl: 'https://bilibili.com' },
+        component: () => import('@/views/AboutView.vue')
+      }
+    ]
+  },
 ]
 
 const router = createRouter({
