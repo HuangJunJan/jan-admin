@@ -8,7 +8,7 @@ const threejs: Array<RouteRecordRaw> = [
       title: 'Threejs',
       icon: 'link'
     },
-    redirect: '/threejs/11',
+    redirect: '/threejs/cube',
     component: Layout,
     children: [
       {
@@ -18,7 +18,7 @@ const threejs: Array<RouteRecordRaw> = [
           title: 'cube',
           icon: 'link'
         },
-        component: () => import('@/views/dashboard.vue'),
+        component: () => import('@/views/threejs/cube.vue'),
       },
       // {
       //   path: '2',
