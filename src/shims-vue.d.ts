@@ -5,3 +5,4 @@ declare module "*.vue" {
 }
 // ts识别mockjs
 declare module "mockjs"
+declare module "@types/three";

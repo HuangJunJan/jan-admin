@@ -20,7 +20,6 @@ const route = useRoute();
 
 // 菜单点击、选择
 const menuSelect = (index: string): void => {
-  console.log(index);
   if (index.indexOf('https://') > -1 || index.indexOf('http://') > -1) {
     window.location.href = index;
   } else {

@@ -14,7 +14,6 @@ const mockList: number[] = reactive([]);
 
 const sendHttp = () => {
   getList().then(res => {
-    console.log(res);
     mockList.push(...res.data?.dataList);
   });
 };

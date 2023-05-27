@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Layout from '@/Layout/index.vue'
 import multistage from './modules/multistage'
+import threejs from './modules/threejs'
 
 export const baseRouter: Array<RouteRecordRaw> = [
   {
@@ -38,6 +39,7 @@ export const baseRouter: Array<RouteRecordRaw> = [
       }
     ]
   },
+  ...threejs,
   ...multistage,
   {
     path: '/external-link',
@@ -57,6 +59,7 @@ export const baseRouter: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
+  
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: baseRouter
 })
